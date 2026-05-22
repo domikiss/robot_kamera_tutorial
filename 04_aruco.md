@@ -28,4 +28,4 @@ ros2 topic echo /aruco_detections
 ```
 
 ---------------------------------------------------------------------
-[<<](03_ismert_meret.md) | [^](README.md) | [>>>](05_kalibracio.md)
+[<<](03_ismert_meret.md) | [^](README.md) | [>>](05_kalibracio.md)

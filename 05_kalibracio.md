@@ -21,7 +21,7 @@ Vegyük elő a sakktáblát, és mozgassuk különböző pozíciókba. Ügyeljü
     - Méret
     - Függőleges/vízszintes tengely körüli elforgatás (skew)
 
-Ha elég kép készült, akkor "CALIBRATE", majd "SAVE" gombokat nyomjuk meg.
+Ha elég kép készült, akkor a "CALIBRATE", majd a "SAVE" gombot nyomjuk meg.
 
 Az elkészült `ost.yaml` fájlt másoljuk az `src/aruco_demo/config` mappába!
 

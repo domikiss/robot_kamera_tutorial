@@ -10,16 +10,11 @@ __Tartalom__
     - [Kamerakalibráció](05_kalibracio.md)
     - [ArUco demo](06_aruco_demo.md)
 3. Mobil robot irányítása gépi látás alapján
-    - aruco_follower node átnézése
-    - cmd_vel publikálás
-    - Adott marker keresése
-    - szögsebesség-parancs számítása
-    - sebességparancs számítása
-    - Tesztelés lokális gépen
-    - Csatlakozás a GoPiGo3-hoz (SSH)
-    - ROS_DOMAIN_ID beállítása a roboton
-    - gopigo3_bringup
-    - Tesztelés a gopigo-n
+    - [ArUco follower ROS node](07_aruco_follower.md)
+    - [1. feladat: Sebességparancs publikálása](08_aruco_follower_task_1.md)
+    - [2. feladat: Adott marker keresése a fogadott detekciós üzenetben](09_aruco_follower_task_2.md)
+    - [3. feladat: Orientációszabályozás (szögsebesség számítása)](10_aruco_follower_task_3.md)
+    - [4. feladat: Távolságszabályozás (sebesség számítása)](11_aruco_follower_task_4.md)
 
 
 ---------------------------------------------------------------------
@@ -30,3 +25,6 @@ A mérésen a ROS2 keretrendszer a Zenoh RMW-t (ROS Middleware) használja a kom
 ```bash
 ros2 run rmw_zenoh_cpp rmw_zenohd
 ```
+
+---------------------------------------------------------------------
+[>>](01_kamera_modell.md)
