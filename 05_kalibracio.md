@@ -1,3 +1,5 @@
+[<<](04_aruco.md) | [^](README.md) | [>>](06_aruco_demo.md)
+
 # Kamerakalibráció
 
 Indítsuk el az alábbi ROS node-okat:
@@ -26,4 +28,4 @@ Az elkészült `ost.yaml` fájlt másoljuk az `src/aruco_demo/config` mappába!
 
 
 ---------------------------------------------------------------------
-[<<<](04_aruco.md) | [^^^](README.md) | [>>>](06_aruco_demo.md)
+[<<](04_aruco.md) | [^](README.md) | [>>](06_aruco_demo.md)

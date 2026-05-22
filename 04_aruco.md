@@ -1,3 +1,5 @@
+[<<](03_ismert_meret.md) | [^](README.md) | [>>](05_kalibracio.md)
+
 # Hogyan lehet 2D képből 3D információt kinyerni?
 
 ## ArUco markerek
@@ -5,10 +7,13 @@
 - ArUco: Augmented Reality University of Cordoba
 - Könnyen detektálható 2D szimbólumok
 
-![](https://miro.medium.com/v2/resize:fit:720/format:webp/0*oUmY-9Q7brmLQcAx.gif)
+<p align="center"><img src="pic/aruco_marker_intro.gif" width="1280"/></p>
+
+*(Forrás: https://towardsdev.com/aruco-marker-generation-and-detection-with-opencv-python-with-newer-updated-version-f801d7dcf211)*
 
 
-Próbáljuk ki!
+
+**Próbáljuk ki!**
 
 1. Csatlakoztassuk a Logitech webkamerát a számítógéphez
 2. Indítsuk el a launch fájlt, és értelmezzük, hogy mit látunk!
@@ -23,4 +28,4 @@ ros2 topic echo /aruco_detections
 ```
 
 ---------------------------------------------------------------------
-[<<<](03_ismert_meret.md) | [^^^](README.md) | [>>>](05_kalibracio.md)
+[<<](03_ismert_meret.md) | [^](README.md) | [>>>](05_kalibracio.md)
