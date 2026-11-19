@@ -2,7 +2,7 @@
 
 # ArUco follower ROS node
 
-## 3. feladat: Orientációszabályozás (szögsebesség számítása)
+## 3/1. feladat: Orientációszabályozás (szögsebesség számítása)
 
 ```C++
 void ArucoFollowerNode::timerCallback()
@@ -43,40 +43,44 @@ ros2 launch aruco_demo aruco_follower_launch.py
 ros2 topic echo /cmd_vel
 ```
 
-### Próbáljuk ki a roboton is!
+## 3/2. feladat: Távolságszabályozás (sebesség számítása)
 
-Csatlakozás a GoPiGo3 robothoz SSH-n (használjuk az adott robothoz tartozó IP címet):
+```C++
+void ArucoFollowerNode::timerCallback()
+{
+// [...]
 
-```bash
-ssh ubuntu@192.168.100.xx    # xx: 19 vagy 25  (rá van írva a robotra)
+    geometry_msgs::msg::Point target_point;
+    target_point.x = target_pose_transformed.pose.position.x;
+    target_point.y = target_pose_transformed.pose.position.y;
+    target_point.z = 0.0;
+    
+// [...]
+
+
+    // ------------------------------------------------------------------------------------
+    // TODO 4: Calculate linear velocity command based on the distance to the target point
+    // ------------------------------------------------------------------------------------
+
+    // --- USER CODE BEGIN ---
+
+  
+    // --- USER CODE END ---
+
+
+// [...]
+}
 ```
 
-ROS_DOMAIN_ID lekérdezése: 
+### Fordítsuk le és próbáljuk ki!
 
 ```bash
-# Host PC terminal:
-printenv | grep ROS
-```
+# Host PC terminal 1:
+colcon build --symlink-install
+ros2 launch aruco_demo aruco_follower_launch.py
 
-Olvassuk le a ROS_DOMAIN_ID értékét, majd állítsuk be a GoPiGo3 termináljában (XXX az ID értéke):
-
-```bash
-# GoPiGo3 robot terminal (SSH):
-export ROS_DOMAIN_ID=XXX
-```
-
-"Élesszük fel" a robotot:
-
-```bash
-# GoPiGo3 robot terminal (SSH):
-ros2 launch gopigo3_bringup gopigo3_bringup_launch.py
-```
-
-Indítsuk el az alkalmazást a host gépen:
-
-```bash
-# Host PC terminal:
-ros2 launch aruco_demo aruco_follower_launch.py use_real_robot:=True
+# Host PC terminal 2:
+ros2 topic echo /cmd_vel
 ```
 
 

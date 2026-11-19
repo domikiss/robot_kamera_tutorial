@@ -2,47 +2,27 @@
 
 # ArUco follower ROS node
 
-## 4. feladat: Távolságszabályozás (sebesség számítása)
+## 4. feladat: Próbáljuk ki a roboton is!
 
-```C++
-void ArucoFollowerNode::timerCallback()
-{
-// [...]
-
-    geometry_msgs::msg::Point target_point;
-    target_point.x = target_pose_transformed.pose.position.x;
-    target_point.y = target_pose_transformed.pose.position.y;
-    target_point.z = 0.0;
-    
-// [...]
-
-
-    // ------------------------------------------------------------------------------------
-    // TODO 4: Calculate linear velocity command based on the distance to the target point
-    // ------------------------------------------------------------------------------------
-
-    // --- USER CODE BEGIN ---
-
-  
-    // --- USER CODE END ---
-
-
-// [...]
-}
-```
-
-### Fordítsuk le és próbáljuk ki!
+Csatlakozás a GoPiGo3 robothoz SSH-n (használjuk az adott robothoz tartozó IP címet):
 
 ```bash
-# Host PC terminal 1:
-colcon build --symlink-install
-ros2 launch aruco_demo aruco_follower_launch.py
-
-# Host PC terminal 2:
-ros2 topic echo /cmd_vel
+ssh ubuntu@192.168.100.xx    # xx: 19 vagy 25  (rá van írva a robotra)
 ```
 
-### Próbáljuk ki a roboton is!
+ROS_DOMAIN_ID lekérdezése: 
+
+```bash
+# Host PC terminal:
+printenv | grep ROS
+```
+
+Olvassuk le a ROS_DOMAIN_ID értékét, majd állítsuk be a GoPiGo3 termináljában (XXX az ID értéke):
+
+```bash
+# GoPiGo3 robot terminal (SSH):
+export ROS_DOMAIN_ID=XXX
+```
 
 "Élesszük fel" a robotot:
 
